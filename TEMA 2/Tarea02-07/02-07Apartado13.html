@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+
+<body>
+
+    <h3>Ejercicio 13 Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta que el
+        usuario escriba “salir” que terminará.</h3>
+    <br><br>
+
+    <script>
+
+        let cadena;
+
+        do {
+
+            cadena = prompt("Dime algo: ");
+
+            if (cadena == "salir") {
+            } else {
+
+                document.writeln(cadena + "<br>")
+
+            }
+
+        } while (cadena != "salir")
+
+    </script>
+
+</body>
+
+</html>

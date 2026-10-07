@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 12</title>
 </head>
+
 <body>
 
-    <h3></h3>
-    
+    <h3>Ejercicio 12 Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre por
+        pantalla el número de veces que aparece la letra en la frase.</h3>
+    <br><br>
+
+    <script>
+
+        let cadena = prompt("Dime una frase: ");
+        let letra = prompt("Dime una letra: ");
+        let letras = cadena.split(letra).length - 1;
+
+        document.writeln(letras);
+
+
+    </script>
+
 </body>
+
 </html>
