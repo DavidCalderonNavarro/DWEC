@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h3>Ejercicio 2 Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años
+        que ha cumplido (desde 1 hasta su edad). (while)</h3>
+    <br><br>
+
+    <script>
+
+        let edad = parseInt(prompt("Dime tu edad: "));
+        let anio_actual = 2026;
+        let nacimiento = anio_actual - edad;
+        let contador = 0;
+
+        while(contador < edad){
+
+            contador += 1;
+            nacimiento += 1;
+            document.writeln("En el año " + nacimiento + " tenias " + contador + "<br>");
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

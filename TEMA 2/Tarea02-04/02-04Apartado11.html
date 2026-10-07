@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado11</title>
+</head>
+
+<body>
+
+    <script>
+
+        let binario = "10010111";
+        let num255 = "11111111";
+
+        let decimal = parseInt("10010111", 2);
+
+        document.writeln("<br>" + binario + " es " + decimal + " en decimal");
+
+        let DesplazamientoAND = decimal & 255;
+        let DesplazamientoOR = decimal | 255;
+        let DesplazamientoXOR = decimal ^ decimal;
+        let DesplazamientoNOT = ~decimal;
+        let Desplazamientoizquierda = decimal << 1;
+        let Desplazamientoderecha = decimal >> 1;
+        let Desplazamientoderecha0 = decimal >>> 2;
+
+        document.writeln("<br>AND = " + DesplazamientoAND);
+        document.writeln("<br>OR = " + DesplazamientoOR);
+        document.writeln("<br>XOR = " + DesplazamientoXOR);
+        document.writeln("<br>NOT = " + DesplazamientoNOT);
+        document.writeln("<br>Desplazamiento izquierda = " + Desplazamientoizquierda);
+        document.writeln("<br>Desplazamiento derecha = " + Desplazamientoderecha);
+        document.writeln("<br>Desplazamiento derecha 0 = " + Desplazamientoderecha0);
+        
+    </script>
+
+</body>
+
+</html>

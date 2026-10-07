@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+
+    <h3>Ejercicio 8 Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo
+        rectángulo como el de más abajo.</h3>
+    <br><br>
+
+    <script>
+
+        let numero = parseInt(prompt("Dime un numero: "));
+        let veces = 0;
+
+        for (let i = 0; i <= numero; i++) {
+
+            for (let a = veces - 1; a >= 1; a -= 2) {
+
+                document.writeln(a);
+
+            }
+
+            veces += 2;
+            document.writeln("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
