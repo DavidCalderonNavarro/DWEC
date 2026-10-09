@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7</h1>
+    <h3>crea un programa que leyendo la variable window.location.href y sacando sus primeros 4
+        valores substring(inicio,fin) decida si es una pagina local o remota.</h3>
+
+    <script>
+
+        const url = window.location.href;
+        const inicio = url.substring(0, 4);
+
+        if (inicio === "file") {
+            document.writeln("Página local");
+        } else if (inicio === "http") {
+            document.writeln("Página remota");
+        } else {
+            document.writeln("Protocolo desconocido");
+        }
+
+    </script>
+
+</body>
+
+</html>

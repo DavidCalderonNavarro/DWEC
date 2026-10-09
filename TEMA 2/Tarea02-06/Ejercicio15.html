@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 15</h1>
+    <h3>escribir un programa que solicite al usuario una letra y, si es una vocal, muestre el
+        mensaje “es vocal”. Se debe validar que el usuario ingrese sólo un carácter. Si ingresa
+        un string de más de un carácter, informarle que no se puede procesar el dato. (si length
+        es mayor que 1 va a 0 si no un if con 5 OR con las vocales)</h3>
+
+        <script>
+
+            let letra = prompt("Dime un letra: ");
+
+            if(letra.length > 1){
+
+                document.writeln("No se puede procesar el dato");
+
+            }else{
+
+                if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+
+                    document.writeln("Es vocal");
+
+                }else{
+
+                    document.writeln("No es vocal");
+
+                }
+
+            }
+
+        </script>
+
+</body>
+
+</html>

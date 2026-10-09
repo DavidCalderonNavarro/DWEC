@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 14</h1>
+    <h3>crear un programa que permita al usuario elegir un candidato por el cual votar. Las
+        posibilidades son: candidato A por el partido rojo, candidato B por el partido verde,
+        candidato C por el partido azul. Según el candidato elegido (A, B ó C) se le debe imprimir
+        el mensaje “Usted ha votado por el partido [color que corresponda al candidato elegido]”.</h3>
+
+        <script>
+
+            let opcion = prompt("Elige al candidato(A, B o C): ");
+
+            if(opcion == "A"){
+
+                document.writeln("Usted ha votado por el partido rojo");
+
+            }else if(opcion == "B"){
+
+                document.writeln("Usted ha votado por el partido verde");
+
+            }else if(opcion == "C"){
+
+                document.writeln("Usted ha votado por el partido azul");
+
+            }else{
+
+                document.writeln("Opcion erronea");
+
+            }
+
+        </script>
+
+</body>
+
+</html>

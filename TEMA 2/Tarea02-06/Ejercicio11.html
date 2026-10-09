@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 11</h1>
+    <h3>Requerir al usuario que ingrese un día de la semana e imprimir un mensaje si es lunes,
+        otro mensaje diferente si es viernes, otro mensaje diferente si es sábado o domingo. Si
+        el día ingresado no es ninguno de esos, imprimir otro mensaje.</h3>
+
+    <script>
+
+        let dia = parseInt(prompt("Dime un dia de la semana(En numero): "));
+
+        switch (dia) {
+
+            case 1:
+                document.writeln("Lunes");
+                break;
+            case 2:
+                document.writeln("Martes");
+                break;
+            case 3:
+                document.writeln("Miercoles");
+                break;
+            case 4:
+                document.writeln("Jueves");
+                break;
+            case 5:
+                document.writeln("Viernes");
+                break;
+            case 6:
+                document.writeln("Sabado");
+                break;
+            case 7:
+                document.writeln("Domingo");
+                break;
+            default:
+                document.writeln("Error");
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>

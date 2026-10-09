@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 13</h1>
+    <h3>Solicitar al usuario que ingrese los nombres de dos personas, los cuales se almacenarán
+        en dos variables. A continuación, imprimir “coincidencia” si los nombres de ambas
+        personas comienzan con la misma letra ó si terminan con la misma letra. Si no es así,
+        imprimir “no hay coincidencia”.</h3>
+
+        <script>
+
+            let nombre1 = prompt("Dime el primer nombre: ");
+            let nombre2 = prompt("Dime el segundo nombre: ");
+
+            if(nombre1[0] == nombre2[0] || nombre1[nombre1.length - 1] == nombre2[nombre2.length - 1]){
+
+                document.writeln("Coincidencia")
+
+            }else{
+
+                document.writeln("No hay coincidencia");
+
+            }
+
+        </script>
+
+</body>
+
+</html>
