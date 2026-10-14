@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+
+<body>
+
+    <h3>Ejercicio 14 Escribir un programa que pregunte al usuario una cantidad a pedir, el interés
+        anual y el número de años en el que lo amortizara, y muestre por pantalla las cuotas
+        pagadas durante cada años suponiendo que actualizan los intereses cada año.</h3>
+
+    <script>
+
+
+        let cantidad = parseInt(prompt("Introduce la cantidad a pedir"));
+        let interes = parseInt(prompt("Introduce el interes anual"));
+        let anos = parseInt(prompt("Introduce el numero de años"));
+
+        interes = interes / 100;
+
+        let total = cantidad;
+
+        for (let i = 1; i <= anos; i++) {
+            total = total * (1 + interes);
+        }
+
+        let cuota = total / (anos * 12);
+        let restante = total;
+        let pagado = 0;
+
+        document.writeln("Total pedido: " + cantidad + "<br>");
+        document.writeln("Total a devolver: " + total + "<br>");
+        document.writeln("Cuota mensual: " + cuota + "<br><br>");
+
+        for (let i = 1; i <= anos; i++) {
+            let pagoAnual = cuota * 12;
+
+            pagado = pagado + pagoAnual;
+            restante = total - pagado;
+
+            document.writeln("Año: " + i + "<br>");
+            document.writeln("Pagado hasta ahora: " + pagado + "<br>");
+            document.writeln("Restante por pagar: " + restante + "<br><br>");
+        }
+
+    </script>
+
+</body>
+
+</html>

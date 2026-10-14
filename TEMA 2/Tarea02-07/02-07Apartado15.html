@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+
+<body>
+    <h3>Escribir un programa que pregunte al usuario una
+        cantidad a invertir, el interés anual y el número de años
+        en el que lo invertirá , y muestre por pantalla el total
+        Para realizar el cálculo interés compuesto se utiliza esta
+        fórmula: Cn= C0 (1+i)n
+
+        , siendo la “Cn” el capital que
+        resulta al final, la “C0” el monto que depositaste para
+        invertir, la “i” la tasa de interés, la “n” el período de
+        tiempo en medio del cual harás la inversión para,
+        posteriormente, recibir los beneficios.</h3>
+
+    <script>
+
+        let cantidad = Number(prompt("Introduce la cantidad a invertir"));
+        let interes = Number(prompt("Introduce el interes anual"));
+        let anos = Number(prompt("Introduce el numero de años"));
+
+        let capital = cantidad;
+        let beneficio = 0;
+
+        for (let i = 1; i <= anos; i++) {
+            let intereses = capital * interes;
+            capital = capital + intereses;
+            beneficio = capital - cantidad;
+
+            document.writeln("Año: " + i + "<br>");
+            document.writeln("Intereses del año: " + intereses + "<br>");
+            document.writeln("Beneficios acumulados: " + beneficio + "<br>");
+            document.writeln("Capital total: " + capital + "<br><br>");
+        }
+
+        document.writeln("Capital inicial: " + cantidad + "<br>");
+        document.writeln("Capital final: " + capital + "<br>");
+        document.writeln("Beneficio total: " + beneficio + "<br>");
+
+    </script>
+
+</body>
+
+</html>
