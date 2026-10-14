@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+    <h3>Modifica el anterior para que el verde sea un degradado (000000 va a 00ff00)</h3>
+
+    <script>
+
+        const arr1 = ["Malaga", "Sevilla", "Cordoba", "Huelva", "Cadiz", "Almeria", "Granada"];
+        let verde = 0;
+        let color;
+
+        document.writeln("<ol>");
+
+        for (let i = 0; i < arr1.length; i++) {
+            verde = Math.round(i * 255 / (arr1.length - 1));
+            color = "rgb(0," + verde + ",0)";
+
+            document.writeln("<li style='color:" + color + "'>" + arr1[i] + "</li>");
+
+        }
+
+        document.writeln("</ol>");
+
+    </script>
+
+</body>
+
+</html>

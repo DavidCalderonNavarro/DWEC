@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <style>
+        ol {
+
+            color: green;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Ejercicio 1</h1>
+    <h3>Escribir un programa que cree muestre todos los elementos de este array con for of
+        const arr1 = ["Malaga", "Sevilla", "Cordoba", "Huelva", "Cadiz", "Almeria", "Granada" ];
+        en una lista html con color verde.</h3>
+
+    <script>
+
+        const arr1 = ["Malaga", "Sevilla", "Cordoba", "Huelva", "Cadiz", "Almeria", "Granada"];
+
+        document.writeln("<ol>");
+        for (let i of arr1) {
+
+            document.writeln("<li>" + i + "<br></li>");
+
+        }
+
+        document.writeln("</ol>");
+
+    </script>
+
+</body>
+
+</html>
