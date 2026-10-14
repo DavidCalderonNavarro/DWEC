@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 16</h1>
+    <h3>Hacer un programa que permita saber si un año es bisiesto. Para que un año sea
+        bisiesto debe ser divisible por 4 y no debe ser divisible por 100, excepto que también sea
+        divisible por 400.</h3>
+
+    <script>
+
+        let anio = parseInt(prompt("Dime un año: "));
+
+        if (anio % 4 == 0) {
+
+            if (anio % 100 == 0) {
+
+                if (anio % 400 == 0) {
+
+                    document.writeln("Tu año es bisiesto");
+
+                } else {
+
+                    document.writeln("Tu año no es bisiesto");
+
+                }
+            } else {
+
+                document.writeln("Tu año es bisiesto");
+
+
+            }
+
+        } else {
+
+            document.writeln("Tu año no es bisiesto");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

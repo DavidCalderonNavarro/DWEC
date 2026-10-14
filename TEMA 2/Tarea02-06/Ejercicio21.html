@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 21</title>
+</head>
+<body>
+
+    <h1>Ejercicio 21</h1>
+    <h3>clasificar una nota usando if</h3>
+
+    <script>
+
+        let nota = parseInt(prompt("Dime tu nota: "));
+
+        if(nota >= 0 && nota <= 4){
+
+            document.writeln("Insuficiente");
+
+        }else if(nota == 5 || nota == 6){
+
+            document.writeln("Suficiente");
+
+        }else if(nota == 7 || nota == 8){
+
+            document.writeln("Notable");
+
+        }else if(nota == 9 || nota == 10){
+
+            document.writeln("Sobresaliente");
+
+        }else{
+
+            document.writeln("Escribe una nota valida");
+
+        }
+
+    </script>
+
+</body>
+</html>

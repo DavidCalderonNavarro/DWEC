@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 27</h1>
+    <h3>crea un Semáforo Dado un color (rojo, amarillo, verde), muestra la acción
+        correspondiente: "Detente", "Precaución" o "Avanza".</h3>
+
+    <script>
+
+        let color = prompt("Dime el color del semaforo: ");
+
+        switch(color){
+
+            case "rojo":
+                document.writeln("Detente");
+                break;
+            case "amarillo":
+                document.writeln("Precaucion");
+                break;
+            case "verde":
+                document.writeln("Avanza");
+                break;
+            default:
+                document.writeln("Error");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

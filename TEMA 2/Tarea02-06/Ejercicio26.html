@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 26</h1>
+    <h3>crea una Calculadora básica Dado dos números y una operación (+, -, *, /), muestra el
+        resultado usando switch.</h3>
+
+    <script>
+
+        let num1 = parseInt(prompt("Dime el primer numero: "));
+        let num2 = parseInt(prompt("Dime el segundo numero: "));
+
+        let op = prompt("Dime la operacion(+,-,*,/): ");
+        let resultado;
+
+        switch(op){
+
+            case "+":
+                resultado = num1 + num2;
+                break;
+            case "-":
+                resultado = num1 - num2;
+                break;
+            case "*":
+                resultado = num1 * num2;
+                break;
+            case "/":
+                resultado = num1 / num2;
+                break;
+            default:
+                document.writeln("Error");
+
+        }
+
+        document.writeln("Resultado: " + resultado);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 22</h1>
+    <h3>clasifica una nota numérica del 0 al 10 en:</h3>
+
+    <script>
+
+        let nota = parseInt(prompt("Dime una nota: "));
+
+        switch (nota) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                document.writeln("Insuficiente");
+                break;
+
+            case 5:
+            case 6:
+                document.writeln("Suficiente");
+                break;
+
+            case 7:
+            case 8:
+                document.writeln("Notable");
+                break;
+
+            case 9:
+            case 10:
+                document.writeln("Sobresaliente");
+                break;
+
+            default:
+                document.writeln("Introduce una nota válida");
+        }
+
+    </script>
+
+</body>
+
+</html>
