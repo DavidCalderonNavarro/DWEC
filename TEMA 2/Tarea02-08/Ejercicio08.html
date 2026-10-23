@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 8</h1>
+    <h3>un bucle para pintar esta figura usando una tabla que ponemos de fondo el color adecuado la
+        tabla debe tener estos valores (pista es un array 3x3)</h3>
+
+    <script>
+
+        const colores = [["blue", "lime", "red"],
+                        ["red", "blue", "lime"],
+                        ["lime", "red", "blue"]];
+
+        document.writeln("<table width='500px' height='500px' border='0' cellpadding = 0 cellspacing = 0 >");
+          
+        for(let filas = 0; filas < 3; filas++){
+
+            document.writeln("<tr>");
+
+            for(let colum = 0; colum < 3; colum++){
+
+                document.writeln("<td style='background-color:" + colores[filas][colum] + ";'></td>");
+
+            }
+
+            document.writeln("</tr>");
+
+        }
+        
+        document.writeln("</table >");
+
+    </script>
+
+</body>
+
+</html>

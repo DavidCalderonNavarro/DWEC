@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <h3>Crea un script que cree un formulario con tantos botones como haya en el siguiente y ponle esto dentro de cada
+        boton</h3>
+
+    <script>
+
+        const arr1 = ["Malaga", "Sevilla", "Cordoba", "Huelva", "Cadiz", "Almeria", "Granada" ];
+
+        for(let ciudad of arr1){
+
+            document.writeln("<input type='button' onclick=\"alert('La ciudad mas bonita es " + ciudad + "')\"value='" + ciudad + "'>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <h3>Crea un script que te lea tu año de nacimiento y pais y sexo. Te calcule cuantos años te quedan
+        para llegar a la edad media de esperanza de vida tu país (debes hacer un if )</h3>
+
+    <script>
+
+        // Pedimos los datos al usuario
+        let pais = prompt("Introduce tu país:");
+        let sexo = prompt("Introduce tu sexo (hombre o mujer):");
+        let nacimiento = parseInt(prompt("Introduce tu año de nacimiento:"));
+
+        // Calculamos la edad
+        let edad = new Date().getFullYear() - nacimiento;
+        let esperanza;
+
+        // Comprobamos el país y el sexo
+        if (pais == "Japón") {
+            if (sexo == "hombre") {
+                esperanza = 81.5;
+            } else {
+                esperanza = 86.9;
+            }
+        } else if (pais == "Suiza") {
+            if (sexo == "hombre") {
+                esperanza = 81.8;
+            } else {
+                esperanza = 85.1;
+            }
+        } else if (pais == "España") {
+            if (sexo == "hombre") {
+                esperanza = 80.7;
+            } else {
+                esperanza = 85.7;
+            }
+        } else if (pais == "Italia") {
+            if (sexo == "hombre") {
+                esperanza = 80.9;
+            } else {
+                esperanza = 84.9;
+            }
+        } else if (pais == "Irak") {
+            if (sexo == "hombre") {
+                esperanza = 69.9;
+            } else {
+                esperanza = 75.0;
+            }
+        } else if (pais == "Guinea Ecuatorial") {
+            if (sexo == "hombre") {
+                esperanza = 60.9;
+            } else {
+                esperanza = 63.6;
+            }
+        } else if (pais == "Somalia") {
+            if (sexo == "hombre") {
+                esperanza = 54.0;
+            } else {
+                esperanza = 59.2;
+            }
+        } else {
+            document.writeln("País no válido");
+        }
+
+        // Calculamos los años restantes
+        if (esperanza != "") {
+            let restantes = esperanza - edad;
+
+            if (restantes > 0) {
+                document.writeln("Te quedan aproximadamente " + restantes + " años.");
+            } else {
+                document.writeln("Has alcanzado o superado la esperanza de vida media.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

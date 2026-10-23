@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="a.js" defer></script> <!-- Imprime: "Script A (defer)" -->
+    <script src="b.js" defer></script> <!-- Imprime: "Script B (defer)" -->
+    <script src="c.js" async></script> <!-- Imprime: "Script C (async)" - pesa 10 KB -->
+
+</head>
+
+<body>
+    <h1>Página de prueba</h1>
+    <script>
+        console.log("Script Inline en Body");
+    </script>
+</body>
+
+</html>

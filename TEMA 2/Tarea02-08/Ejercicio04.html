@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4</h1>
+    <h3>Usa for of doble para combinarlos todos y mostrarlos en una tabla</h3>
+
+    <script>
+
+        const arr1 = ["Malaga", "Sevilla", "Cordoba", "Huelva", "Cadiz", "Almeria", "Granada"];
+        const arr2 = ["bonita", "Guapa", " Bella", "Pintoresca", "Hermosa"];
+
+
+        document.writeln("<table style='border: 1px solid black;'>");
+
+        document.writeln("<tr>");
+        
+        for(let ciudad of arr1){
+
+            document.writeln("<td style='border: 1px solid black;'>");
+
+            for(let adj of arr2){
+
+                document.writeln(ciudad + "-" + adj + "<br>");
+
+            }
+
+            document.writeln("</td>");
+
+        }
+
+        document.writeln("</tr>");
+        document.writeln("</table>");
+
+    </script>
+
+</body>
+
+</html>

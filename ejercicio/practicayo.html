@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DWEC</title>
+</head>
+
+<body>
+
+    <h1>David Calderón Navarro</h1>
+    <h2>Ejercicio 1</h2>
+
+    <script>
+
+        let entrada1 = (prompt("Dime el primer numero: "));
+        let entrada2 = (prompt("Dime el segundo numero: "));
+        let entrada3 = (prompt("Dime el tercer numero: "));
+
+        let num1 = Number(entrada1);
+        let num2 = Number(entrada2);
+        let num3 = Number(entrada3);
+
+        let resultado;
+
+        if (entrada1 == null || entrada2 == null || entrada3 == null ||
+            entrada1 == "" || entrada2 == "" || entrada3 == "" ||
+            Number.isInteger(entrada1) || Number.isInteger(entrada2) || Number.isInteger(entrada3)) {
+
+            document.writeln("Error")
+
+        } else {
+
+            resultado = (num1 * num2 + num3) * num3;
+
+        }
+
+        document.writeln("Resultado: " + resultado);
+
+    </script>
+
+    <h2>Ejercicio 2</h2>
+
+    <script>
+
+        const array1 = [1, 2, 3, 4];
+        function saludar() {
+
+            return "Hola";
+
+        }
+
+        const array2 = [2, 3.4, "Si", true, null, array1, saludar()];
+
+        for (let tipos of array2) {
+
+            document.writeln(typeof tipos + ": " + tipos + "<br>");
+
+        }
+
+        document.writeln("Array1 es de tipo array? " + (array1 instanceof Array));
+
+    </script>
+
+    <h2>Ejercicio 3</h2>
+
+    <script>
+
+        let mes = prompt("Dime el mes(1-12): ");
+
+        const filosofo =
+            mes == 1 ? "Aristóteles" :
+                mes == 2 ? "Platón" :
+                    mes == 3 ? "San Agustín" :
+                        mes == 4 ? "Santo Tomás" :
+                            mes == 5 ? "Descartes" :
+                                mes == 6 ? "Rousseau" :
+                                    mes == 7 ? "Locke" :
+                                        "No conocido";
+
+
+        document.writeln(filosofo);
+
+    </script>
+
+    <h2>Ejercicio 4</h2>
+
+    <script>
+
+        
+
+    </script>
+
+</body>
+
+</html>

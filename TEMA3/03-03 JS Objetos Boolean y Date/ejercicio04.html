@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4</h1>
+    <h3>Crea un script que te lea tu fecha de nacimiento y te calcule cuantos días llevas vivo.
+        Debes restar las dos fechas en milisegundos y dividir el numero entre (1000*60*60*24)
+        para mostrar las fechas puedes usar la función</h3>
+
+    <script>
+        var nacimiento = prompt("Introduce tu fecha de nacimiento (dd/mm/aaaa):");
+
+        var partes = nacimiento.split("/");
+        var fechaNacimiento = new Date(partes[2], partes[1] - 1, partes[0]);
+
+        var ahora2 = new Date();
+
+        var fechahoy = ahora2.toLocaleDateString("es-ES");
+        var fechanacimiento = fechaNacimiento.toLocaleDateString("es-ES");
+
+        var diferencia = ahora2.getTime() - fechaNacimiento.getTime();
+
+        var diasVividos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+        document.writeln("Fecha de nacimiento: " + fechanacimiento);
+        document.writeln("<br><br>");
+
+        document.writeln("Fecha de hoy: " + fechahoy);
+        document.writeln("<br><br>");
+
+        document.writeln("Días que llevas vivo: " + diasVividos);
+    </script>
+
+</body>
+
+</html>

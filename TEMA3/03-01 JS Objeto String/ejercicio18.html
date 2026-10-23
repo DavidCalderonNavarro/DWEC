@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 18</h1>
+    <h3>18. Modifica el ejercicio 7 con split() para ponerlas en negrita la cadena buscada
+        ejemplo ‘m’ ‘limon’ resultado li-m-on</h3>
+
+    <script>
+
+        let letra = window.prompt("Introduce la letra que buscas:");
+        let cadena = window.prompt("Introduce una cadena de texto:");
+
+        let partes = cadena.split(letra);
+        let resultado = partes.join("<b>" + letra + "</b>");
+
+        document.writeln("Aparición: " + resultado);
+
+    </script>
+
+</body>
+
+</html>

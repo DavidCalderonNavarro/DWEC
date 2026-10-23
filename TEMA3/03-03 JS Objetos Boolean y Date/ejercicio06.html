@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript" src="datejs/date.js"></script>
+
+    <script>
+
+        document.writeln(Date.today());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().next().friday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().last().monday());
+        document.writeln("<br><br>");
+
+        document.writeln(new Date().next().march());
+        document.writeln("<br><br>");
+
+        document.writeln(new Date().last().week());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().is().friday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().is().fri());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().is().november());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().is().nov());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().is().weekday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().addDays(1));
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().addMonths(-3));
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().add(1).day());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().add(-3).months());
+        document.writeln("<br><br>");
+
+        document.writeln((1).day().fromNow());
+        document.writeln("<br><br>");
+
+        document.writeln((3).months().ago());
+        document.writeln("<br><br>");
+
+        var n = 6;
+        document.writeln(n.months().fromNow());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.monday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.mon());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.march());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.mar());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().first().thursday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().second().thursday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.march().third().thursday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.october().fourth().sunday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().fifth().sunday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.october().final().sunday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.january().first().monday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.december().final().friday());
+        document.writeln("<br><br>");
+
+        document.writeln(Date.today().at("6:15pm"));
+        document.writeln("<br><br>");
+
+        var time = { hour: 18, minute: 15 };
+        document.writeln(Date.today().at(time));
+        document.writeln("<br><br>");
+
+        var birthDayParty = { month: 1, day: 20, hour: 20, minute: 30 };
+        document.writeln(Date.today().set(birthDayParty));
+        document.writeln("<br><br>");
+
+    </script>
+
+</body>
+
+</html>

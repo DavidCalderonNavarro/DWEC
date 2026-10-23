@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7</h1>
+    <h3>Utiliza la libreria datejs para calcular las siguientes fechas</h3>
+
+    <script type="text/javascript" src="datejs/date.js"></script>
+
+    <script>
+
+        document.writeln("Ejercicio 1<br>")
+
+        let hoy = Date.today();
+
+        document.writeln(hoy);
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 2<br>")
+
+        let proximoLunes = Date.today().next().monday()
+
+        document.writeln(proximoLunes)
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 3<br>")
+
+        let hoy23 = Date.today().at("23pm")
+
+        document.writeln(hoy23)
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 4<br>")
+
+        let hoydentrounaño = new Date();
+        hoydentrounaño.setFullYear(hoydentrounaño.getFullYear() + 1);
+
+        document.writeln(hoydentrounaño);
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 5<br>")
+
+        let cumple = new Date(2026, 6, 9)
+
+        document.writeln(cumple)
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 6<br>")
+
+        let fecha = new Date();
+        fecha.setDate(1);
+        fecha.setMonth(fecha.getMonth() + 1);
+
+        while (fecha.getDay() != 1) {
+            fecha.setDate(fecha.getDate() + 1);
+        }
+
+        document.writeln("El primer lunes del mes que viene es: " + fecha.toLocaleDateString());
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 7<br>")
+
+        let hoyViernes = new Date();
+
+        if (hoy.getDay() === 5) {
+
+            document.writeln("Hoy es viernes");
+
+        } else {
+
+            document.writeln("Hoy no es viernes");
+
+        }
+
+        document.writeln("<br><br>")
+
+        document.writeln("Ejercicio 8<br>")
+
+        let hoy2 = new Date();
+        let mesPasado = new Date(hoy.getFullYear(), hoy.getMonth() - 1, 1);
+
+        if (mesPasado.getMonth() === 8) {
+            document.writeln("El mes pasado fue septiembre");
+        } else {
+            document.writeln("El mes pasado no fue septiembre");
+        }
+
+        document.writeln("<br><br>")
+
+    </script>
+
+</body>
+
+</html>

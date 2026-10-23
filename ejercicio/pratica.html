@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DWEC - Temas 01 y 02</title>
+
+    <style>
+        table {
+
+            border: 1px solid black
+        }
+
+        td {
+
+            border: 1px solid black
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1></h1>
+
+    <h2>Ejercicio 1. Prompt</h2>
+    <script>
+        // Pedimos los tres números como texto y comprobamos que sean enteros.
+        let entrada1 = prompt("Introduce el primer número entero:");
+        let entrada2 = prompt("Introduce el segundo número entero:");
+        let entrada3 = prompt("Introduce el tercer número entero:");
+
+        let num1 = Number(entrada1);
+        let num2 = Number(entrada2);
+        let num3 = Number(entrada3);
+
+        if (entrada1 === "" || entrada2 === "" || entrada3 === "" ||
+            entrada1 === null || entrada2 === null || entrada3 === null ||
+            !Number.isInteger(num1) || !Number.isInteger(num2) || !Number.isInteger(num3)) {
+            document.write("<p>Error: debes introducir tres números enteros.</p>");
+        } else {
+            let resultado = (num1 * num2 + num3) * num3;
+            document.write("<p>Resultado de la operación: " + resultado + "</p>");
+        }
+    </script>
+
+    <h2>Ejercicio 2. typeof e instanceof</h2>
+    <script>
+        let numeroEntero = 4;
+        let numeroDecimal = 3.456;
+        let texto = "Hola";
+        let booleano = true;
+        let indefinido;
+        let nulo = null;
+        let array1 = [1, 2, 3];
+        let objeto = { marca: "Seat", modelo: "León" };
+        function saludo() {
+            return "Hola";
+        }
+
+        array2 = [4, 3.4, "Hola", true, null, array1, objeto, saludo()];
+
+        document.write("<ul>");
+
+        for (let tipos of array2) {
+
+            document.writeln("<li>" + tipos + ": " + typeof tipos + "</li>");
+
+        }
+
+        document.write("</ul>");
+
+        document.write("<p>¿array es una instancia de Array?: " + (array instanceof Array) + "</p>");
+        document.write("<p>¿objeto es una instancia de Object?: " + (objeto instanceof Object) + "</p>");
+        document.write("<p>¿saludo es una instancia de Function?: " + (saludo instanceof Function) + "</p>");
+    </script>
+
+    <h2>Ejercicio 3. Operador ternario</h2>
+    <script>
+        let entradaMes = prompt("Introduce el número de un mes (1-12):");
+        let mes = Number(entradaMes);
+        let filosofo;
+
+        if (entradaMes === null || entradaMes.trim() === "" ||
+            !Number.isInteger(mes) || mes < 1 || mes > 12) {
+            filosofo = "Mes no válido";
+        } else {
+            // Se utiliza el operador ternario para asociar los meses del 1 al 7.
+            filosofo = (mes === 1) ? "Platón" :
+                (mes === 2) ? "Aristóteles" :
+                    (mes === 3) ? "San Agustín" :
+                        (mes === 4) ? "Santo Tomás" :
+                            (mes === 5) ? "Descartes" :
+                                (mes === 6) ? "Rousseau" :
+                                    (mes === 7) ? "Locke" : "No conocido";
+        }
+
+        document.write("<p>Filósofo asociado: " + filosofo + "</p>");
+    </script>
+
+    <h2>Ejercicio 4. Operaciones binarias</h2>
+    <script>
+        let entradaA = prompt("Introduce el primer número entero:");
+        let entradaB = prompt("Introduce el segundo número entero:");
+        let operacion = prompt("Introduce la operación: AND, OR, XOR, DIZQ o DDER");
+        let a = Number(entradaA);
+        let b = Number(entradaB);
+        let resultadoBinario;
+
+        if (entradaA === null || entradaB === null ||
+            entradaA.trim() === "" || entradaB.trim() === "" ||
+            !Number.isInteger(a) || !Number.isInteger(b)) {
+            document.write("<p>Error: introduce dos números enteros.</p>");
+        } else {
+            operacion = (operacion || "").trim().toUpperCase();
+
+            if (operacion === "AND") {
+                resultadoBinario = a & b;
+            } else if (operacion === "OR") {
+                resultadoBinario = a | b;
+            } else if (operacion === "XOR") {
+                resultadoBinario = a ^ b;
+            } else if (operacion === "DIZQ") {
+                resultadoBinario = a << b;
+            } else if (operacion === "DDER") {
+                resultadoBinario = a >> b;
+            } else {
+                resultadoBinario = null;
+            }
+
+            if (resultadoBinario === null) {
+                document.write("<p>Error: operación no válida.</p>");
+            } else {
+                document.write("<p>Operación: " + operacion + "</p>");
+                document.write("<p>Resultado decimal: " + resultadoBinario + "</p>");
+                document.write("<p>Resultado binario: " + (resultadoBinario >>> 0).toString(2) + "</p>");
+            }
+        }
+    </script>
+
+    <h2>Ejercicio 5. switch</h2>
+    <script>
+        let entradaOpcion = prompt("Introduce una opción (1-9):");
+        let opcion = Number(entradaOpcion);
+        let resultadoSwitch = "";
+
+        switch (opcion) {
+            case 1:
+            case 2:
+            case 3:
+                resultadoSwitch = "Números pequeños";
+                break;
+
+            case 5:
+                resultadoSwitch = "La opción es mayor o igual que 5";
+                break;
+
+            case 6:
+                resultadoSwitch = "La opción es mayor o igual que 5<br>";
+                resultadoSwitch += "La opción es mayor o igual que 6";
+                break;
+
+            case 7:
+                resultadoSwitch = "La opción es mayor o igual que 5<br>";
+                resultadoSwitch += "La opción es mayor o igual que 6<br>";
+                resultadoSwitch += "La opción es mayor o igual que 7";
+                break;
+
+            case 8:
+                resultadoSwitch = "Número 8";
+                break;
+
+            case 9:
+                resultadoSwitch = "Número 9";
+                break;
+
+            default:
+                resultadoSwitch = "Error";
+                break;
+        }
+
+        document.write("<p>" + resultadoSwitch + "</p>");
+        
+    </script>
+
+    <h2>Ejercicio 6. Bucles: tabla de colores</h2>
+    <script>
+        let colores = ["#f25", "#f50", "#f85", "#F11", "#F36", "#fA5",
+            "#f5B", "#f25", "#f50", "#f85", "#F11"];
+        let entradaTamaño = prompt("Introduce el tamaño de la tabla:");
+        let tamaño = Number(entradaTamaño);
+
+        if (entradaTamaño !== null && entradaTamaño.trim() !== "" &&
+            Number.isInteger(tamaño) && tamaño > 0 && tamaño <= 20) {
+            document.write('<table>');
+            for (let i = 0; i < tamaño; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < tamaño; j++) {
+                    let color = colores[j % colores.length];
+                    document.write('<td bgcolor="' + color + '">' + (j + 1) + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        } else {
+            document.write("<p>Introduce un tamaño entero entre 1 y 20.</p>");
+        }
+    </script>
+
+    <h2>Ejercicio 7. Bucles: recorrer un objeto</h2>
+    <script>
+        let persona = {
+            Nombre: "paco",
+            Apellido: "Lopez",
+            nacimiento: "11/12/1969",
+            trabajo: "olists SL",
+            sexo: "hombre",
+            amigos: ["juan", "pedro", "miguel"],
+            sueldo: 40000,
+            UltimoProjecto: "jse.js"
+        };
+
+        document.write("<ul>");
+        for (let propiedad in persona) {
+            document.write("<li>" + propiedad + ": " + persona[propiedad] + "</li>");
+        }
+
+        document.write("</ul>");
+    </script>
+
+    <h2>Ejercicio 8. Bucles: mostrar imágenes</h2>
+    <script>
+        let signos = ["capricornio", "acuario", "piscis", "aries", "tauro"];
+
+        document.write("<table style='border: 1px solid black'>");
+        document.write("<tr>");
+        for (let i = 0; i < signos.length; i++) {
+
+            document.write("<td><img src='./signos/" + signos[i] + ".jpg'></td>");
+
+        }
+        document.write("</tr>");
+        document.write("<tr>");
+
+        for (let i = 0; i < signos.length; i++) {
+
+            document.write("<td>" + signos[i] + "</td>");
+
+        }
+
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+
+    <h2>Ejercicio 9. Tabla de botones: minas y huecos</h2>
+    <p>Pulsa cualquier botón para comprobar si la casilla contiene una mina o un hueco.</p>
+    <script>
+        const Minas = [
+            1, 0, 0, 0, 0,
+            0, 1, 1, 1, 1,
+            0, 1, 1, 1, 1,
+            0, 1, 1, 1, 1,
+            0, 1, 1, 1, 0
+        ];
+
+        function comprobarCasilla(indice) {
+            if (Minas[indice] === 1) {
+                alert("¡Es una mina!");
+            } else {
+                alert("Es un hueco.");
+            }
+        }
+
+        document.write('<table>');
+        let contadorMinas = 0;
+
+        for (let fila = 0; fila < 5; fila++) {
+            document.write("<tr>");
+            for (let columna = 0; columna < 5; columna++) {
+                document.write('<td><button class="boton-casilla" type="button" onclick="comprobarCasilla(' +
+                    contadorMinas + ')">M o H</button></td>');
+                contadorMinas++;
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+
+    <h2>Ejercicio 10. Minas</h2>
+    <p>Segunda tabla de botones basada en el array Minas.</p>
+    <script>
+        document.write('<table>');
+        for (let filaMinas = 0; filaMinas < 5; filaMinas++) {
+            document.write("<tr>");
+            for (let columnaMinas = 0; columnaMinas < 5; columnaMinas++) {
+                let posicion = filaMinas * 5 + columnaMinas;
+                document.write('<td><button class="boton-casilla" type="button" onclick="comprobarCasilla(' +
+                    posicion + ')">Casilla ' + (posicion + 1) + '</button></td>');
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+
+</html>

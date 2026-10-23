@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 9</h1>
+    <h3>Toma dos entradas con window.prompt() y que se busque la ultima aparición de la primera entrada en la
+        segunda con lastIndexOf().</h3>
+
+    <script>
+
+        let entrada1 = window.prompt("Introduce el texto que quieres buscar:");
+        let entrada2 = window.prompt("Introduce el texto donde quieres buscar:");
+
+        let posicion = entrada2.lastIndexOf(entrada1);
+
+        document.writeln("Última posición: " + posicion);
+
+    </script>
+
+</body>
+
+</html>
