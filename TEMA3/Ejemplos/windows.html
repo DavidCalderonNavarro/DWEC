@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows()</title>
+</head>
+<body>
+
+    <button onclick="window.close()">Cerrar</button>
+    <button onclick="window.open('windows.html')">Abrir</button>
+    <button onclick="window.blur()">Blur</button>
+
+    <button onclick="parar()">Parar</button>
+    <button onclick="iniciar()">Iniciar</button>
+
+
+    <div id="id1"></div>
+
+    <script>
+
+        function escribirRandom(){
+
+            document.getElementById("id1").innerHTML += "<br>" + Math.random();
+
+        }
+
+        intervalID = setInterval(escribirRandom, 200)
+
+        function parar(){
+
+            
+            window.clearInterval(intervalID);
+            intervalID = null;
+
+        }
+
+        function iniciar(){
+
+            if (intervalID == null) {
+
+                intervalID = setInterval(escribirRandom, 500)
+
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
