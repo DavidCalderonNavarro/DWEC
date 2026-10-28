@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 11</h1>
+    <h3>Modifica dicho script Para poner un boton que aumente o minimice el zoom del iframe modificando el valor
+        de ,15z</h3>
+
+    <p id="demo"></p>
+
+    <button onclick="aumentarZoom()">Aumentar zoom (+)</button>
+    <button onclick="disminuirZoom()">Disminuir zoom (-)</button>
+
+    <p>Zoom actual: <span id="zoom">15</span></p>
+
+    <iframe id="mapa" height="400" width="500">
+    </iframe>
+
+    <script>
+        let zoom = 15;
+
+        function myFunction() {
+            document.getElementById("mapa").src =
+                "https://maps.google.com/maps?q=36.643675,-4.4902875&z="
+                + zoom + "&output=embed";
+
+            document.getElementById("zoom").innerHTML = zoom;
+        }
+
+        function aumentarZoom() {
+            if (zoom < 21) {
+                zoom++;
+                myFunction();
+            }
+        }
+
+        function disminuirZoom() {
+            if (zoom > 1) {
+                zoom--;
+                myFunction();
+            }
+        }
+
+        myFunction();
+    </script>
+
+</body>
+
+</html>

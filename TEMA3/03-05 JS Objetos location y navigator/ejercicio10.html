@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 10</h1>
+    <h3>Modifica dicho script con assign para que te cargue el mapa de google maps en un iframe</h3>
+
+    <p id="demo"></p>
+
+
+    <iframe id="mapa"></iframe>
+
+
+    <script>
+
+        try {
+            if (navigator.geolocation.getCurrentPosition(showPosition).GeolocationPositionError != PERMISSION_DENIED)
+                navigator.geolocation.getCurrentPosition(showPosition);
+        } catch (e) {
+            document.getElementById("demo").innerHTML =
+                "Geolocation is not supported by this browser2.";
+        }
+        function showPosition(position) {
+            document.getElementById("demo").innerHTML =
+                "Latitude: " + position.coords.latitude + "<br>" +
+                "Longitude: " + position.coords.longitude;
+            myFunction()
+        }
+        function myFunction() {
+            //Sirve para navegar a otra pagina
+            document.getElementById("mapa").src =
+                "https://maps.google.com/maps?q=36.643675,-4.4902875&z=15&output=embed";
+        }
+    </script>
+
+</body>
+
+</html>

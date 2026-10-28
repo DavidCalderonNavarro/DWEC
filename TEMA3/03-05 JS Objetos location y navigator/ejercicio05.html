@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <h3>Haz un ejemplo de window.reload() añadiendo un botón al anterior ejercicio</h3>
+
+    <h2>The assign Property of Location Object</h2>
+    <button onclick="myFunction()">Load new document</button>
+    <button onclick="window.reload()">Recargar</button>
+
+    <script>
+        let entrada = prompt("Dime una pagina: ")
+
+        function myFunction() {
+            //Sirve para navegar a otra pagina
+            location.assign(entrada);
+        }
+    </script>
+
+</body>
+
+</html>
