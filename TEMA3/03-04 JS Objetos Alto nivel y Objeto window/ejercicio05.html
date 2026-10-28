@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <h3>Muestra una ventana emergente de alerta con el mensaje “ALERTA Te estan Robando el banco”
+        y después Muestra una ventana emergente de alerta con el mensaje “Estas de acuerdo?” y dependiendo
+        de él Escribe de acuerdo o no.</h3>
+
+    <script>
+
+        let ventana1 = window.open("nueva.html")
+        ventana1.alert("ALERTA Te estan Robando el banco");
+
+        let ventana2 = window.open("nueva2.html")
+        let respuesta = ventana2.confirm("¿Estás de acuerdo?");
+
+        if (respuesta) {
+            alert("Has dicho que sí");
+        } else {
+            alert("Has dicho que no");
+        }
+
+    </script>
+
+</body>
+
+</html>

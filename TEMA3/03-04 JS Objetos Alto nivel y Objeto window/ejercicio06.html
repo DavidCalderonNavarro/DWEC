@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+    <h3>Usa este código para crear un ejemplo de clearInterval() Resetea el cronómetro ajustado con
+        setInterval() y setInterval( funcion, milisegundos)</h3>
+    
+    <p id="mensaje"></p>
+    <button onclick="detener()">Detener</button>
+
+    <script>
+
+        const intervalo = setInterval(dihola, 500, "valor");
+
+
+        function dihola(valor) {
+            
+            document.getElementById("mensaje").innerHTML += "Hello";
+
+        }
+
+        function detener(){
+
+            clearInterval(intervalo)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

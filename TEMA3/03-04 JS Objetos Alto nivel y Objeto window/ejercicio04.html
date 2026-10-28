@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4</h1>
+    <h3>Crea un script que lea una url con prompt y que la abra en una nueva ventana y que muestre sus
+        siguientes propiedades.</h3>
+
+    <script>
+
+        let entrada = prompt("Dime la url: ")
+
+        let subVentana = window.open(entrada)
+
+        document.writeln("Propiedades: <br>")
+        document.writeln(subVentana.defaultStatus + "<br>")
+        document.writeln(subVentana.length + "<br>")
+        document.writeln(subVentana.location + "<br>")
+        document.writeln(subVentana.name + "<br>")
+
+    </script>
+
+</body>
+
+</html>

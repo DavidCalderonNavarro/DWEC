@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7</h1>
+    <h3>Modificalo para que te muestre la hora cada segundo</h3>
+
+    <p id="aumentar"></p>
+
+    <script>
+
+        const intervalo = setInterval(aumentar, 1000);
+
+        function aumentar(){
+
+            const date = new Date();
+            document.getElementById("aumentar").innerHTML +=  "<br>Hello " + date.toLocaleTimeString();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
