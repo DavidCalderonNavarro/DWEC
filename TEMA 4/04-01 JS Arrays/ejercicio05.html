@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <h3>Modifica el ejercicio anterior para que pulsando en un
+        botón y te los ordene y muestre</h3>
+
+    <input type="text" id="dato" placeholder="Escribe un dato">
+    <button onclick="anadir()">Añadir</button>
+    <button onclick="ordenar()">Ordenar</button>
+
+    <h3>Elementos del array:</h3>
+    <p id="resultado"></p>
+
+    <script>
+        let datos = new Array();
+
+        function anadir() {
+            let valor = document.getElementById("dato").value;
+
+            if (valor !== "") {
+                datos.push(valor);
+
+                document.getElementById("resultado").innerHTML =
+                    datos.join("<br>");
+
+                document.getElementById("dato").value = "";
+            }
+        }
+
+        function ordenar() {
+
+            datos.sort()
+
+            mostrar()
+
+        }
+
+        function mostrar() {
+
+            document.getElementById("resultado").innerHTML =
+                datos.join("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

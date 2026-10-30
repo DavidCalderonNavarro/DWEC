@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+    <h3>Dado un vector de enteros, comprobar el mayor, el
+        menor y por último la media de todos.</h3>
+
+    <p id="ej6"></p>
+
+    <script>
+
+        let vector = [5, 10, 15, 20, 25];
+        let mayor = vector[0]
+        let menor = vector[0]
+        let contador = 0
+        let suma = 0
+        let media = 0
+
+        for (let i = 0; i < 5; i++) {
+
+            if (mayor <= vector[i]) {
+
+                mayor = vector[i]
+
+            }
+
+            if (menor > vector[i]) {
+
+                menor = vector[i]
+
+            }
+
+            suma += vector[i]
+            contador++
+
+        }
+
+        media = suma / contador
+
+        document.getElementById("ej6").innerHTML = "Mayor: " + mayor + "<br>" + "Menor: " + menor + "<br>" + "Media: " + media;
+
+    </script>
+
+</body>
+
+</html>

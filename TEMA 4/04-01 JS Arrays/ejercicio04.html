@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4</h1>
+    <h3>Realiza un ejercicio que te añada los datos de un campo text a un array pulsando en un botón y
+        te los muestre debajo</h3>
+
+    <input type="text" id="dato" placeholder="Escribe un dato">
+    <button onclick="anadir()">Añadir</button>
+
+    <h3>Elementos del array:</h3>
+    <p id="resultado"></p>
+
+    <script>
+        let datos = new Array();
+
+        function anadir() {
+            let valor = document.getElementById("dato").value;
+
+            if (valor !== "") {
+                datos.push(valor);
+
+                document.getElementById("resultado").innerHTML =
+                    datos.join("<br>");
+
+                document.getElementById("dato").value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

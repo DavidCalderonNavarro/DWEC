@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 8</h1>
+    <h3>Modifica el anterior para Concatenar tres arraysX
+
+        ,ArrayY, arraysZ de la siguiente forma:
+        X1-Y1-Z1-X2-Y2-Z2-X3-Z3-X4-Z4-X5-Z5-Z6-Z7-Z8 .(ojo que
+        debes usar push para añadir por detras) .
+        Los vectores tendrán la diferente longitud. (El for es el máximo
+        de los tamaños y tienes que hacer un if antes de insertar para
+        asegurarte que estas en tamaño)</h3>
+
+    <div id="ej8"></div>
+
+    AR X <input type="text" value="2,3,4,5,6,7,8,9">
+    AR Y <input type="text" value="2,2,2,2,2,3,3,3,1,1,1">
+    AR Z <input type="text" value="4,6,22,5,1,22,32,90,8,91,66">
+
+    <button onclick="cargarEj8()">Cargar</button>
+
+    <script>
+
+        function cargarEj8(){
+
+            let ej8x = document.getElementById("ej8").value;
+            let ej8y = document.getElementById("ej8").value;
+            let ej8z = document.getElementById("ej8").value;
+
+            let ej8xAr = ej8x.split(",");
+            let ej8yAr = ej8x.split(",");
+            let ej8zAr = ej8x.split(",");
+            let completo = [];
+            let tamaño = ej8xAr.length;
+            let contador = 0
+
+            for(i= 0;i < tamaño; i++){
+
+                completo.push(ej8xAr[i])
+                completo.push(ej8yAr[i])
+                completo.push(ej8zAr[i])
+
+            }
+
+            document.getElementById("ej8").innerHTML = completo.join(",")
+
+        }
+
+        function cargarEj8bis(){
+
+            let ej8x = document.getElementById("ej8").value;
+            let ej8y = document.getElementById("ej8").value;
+            let ej8z = document.getElementById("ej8").value;
+
+            let ej8xAr = ej8x.split(",");
+            let ej8yAr = ej8x.split(",");
+            let ej8zAr = ej8x.split(",");
+            let completo = [];
+            let tamañoX = ej8xAr.length
+            let tamañoY = ej8yAr.length
+            let tamañoZ = ej8zAr.length
+
+            let tamañoMayor = Math.max(tamañoX, tamañoY, tamañoZ);
+            let tamañoMenor = Math.min(tamañoX, tamañoY, tamañoZ);
+
+            let arrayMayor;
+            let arrayMenor;
+            let arrayMedio;
+
+            if (tamañoX == tamañoMayor && tamañoY == tamañoMenor){
+
+                arrayMayor = ej8xAr;
+                arrayMenor = ej8yAr;
+                arrayMedio = ej8zAr;
+
+            }else if (tamañoZ == tamañoMayor && tamañoY == tamañoMenor){
+
+                arrayMayor = ej8zAr;
+                arrayMenor = ej8yAr;
+                arrayMedio = ej8xAr;
+
+            }else if (tamañoY == tamañoMayor && tamañoX == tamañoMenor){
+
+                arrayMayor = ej8yAr;
+                arrayMenor = ej8xAr;
+                arrayMedio = ej8zAr;
+
+            }else if (tamañoX == tamañoMayor && tamañoZ == tamañoMenor){
+
+                arrayMayor = ej8xAr;
+                arrayMenor = ej8zAr;
+                arrayMedio = ej8yAr;
+
+            }else if (tamañoZ == tamañoMayor && tamañoX == tamañoMenor){
+
+                arrayMayor = ej8zAr;
+                arrayMenor = ej8xAr;
+                arrayMedio = ej8yAr;
+
+            }else if (tamañoY == tamañoMayor && tamañoZ == tamañoMenor){
+
+                arrayMayor = ej8yAr;
+                arrayMenor = ej8zAr;
+                arrayMedio = ej8xAr;
+
+            }
+
+            for(i = 0;i < tamañoMenor; i++){
+
+                completo.push(arrayMayor[i])
+                completo.push(arrayMenor[i])
+                completo.push(arrayMedio[i])
+
+            }
+            
+            for(i = tamañoMenor;i < arrayMedio.length; i++){
+
+                completo.push(arrayMayor[i])
+                completo.push(arrayMedio[i])
+
+            }
+
+            for(i = arrayMedio.length;i < tamañoMayor; i++){
+
+                completo.push(arrayMayor[i])
+
+            }
+
+            document.getElementById("ej8").innerHTML = completo.join(",")
+
+        }
+
+    </script>
+
+</body>
+
+</html>
