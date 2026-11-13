@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 9</h1>
+
+    <p>9.Crea un función que te dibuje el cuadrado mágico 3x3 en una tabla con el valor de entrada i</p>
+
+    <p id="ej9"></p>
+
+    <script>
+
+        function cuadradoMagico(i) {
+            return [
+                [i + 3, i + 8, i + 1],
+                [i + 2, i + 4, i + 6],
+                [i + 7, i, i + 5]
+            ]
+        }
+
+        let cuadrado5 = cuadradoMagico(5);
+        document.getElementById("ej9").innerHTML += "<table border='1' ><tr>" + cuadrado5.map((fila) => fila.map((elemento) => "<td>" + elemento + "</td>") + "</tr>") + "</table>"
+
+    </script>
+
+</body>
+
+</html>
