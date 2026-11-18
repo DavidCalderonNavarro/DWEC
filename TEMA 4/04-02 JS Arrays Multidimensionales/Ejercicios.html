@@ -15,9 +15,17 @@
     <p id="ej2"></p>
     <h1>Ejercicio 3</h1>
     <p id="ej3"></p>
+    <h1>Ejercicio 4</h1>
+    <p id="ej4"></p>
+    <h1>Ejercicio 5</h1>
+    <p id="ej5"></p>
     <h1>Ejercicio 6</h1>
     <p id="ej6"></p>
     <p id="ej61"></p>
+    <h1>Ejercicio 7</h1>
+    <p id="ej7"></p>
+    <h1>Ejercicio 8</h1>
+    <div id="ej8"></div>
 
     <script>
 
@@ -38,7 +46,7 @@
         const numeros = Array.from({ length: 4 }, () =>
 
             Array.from({ length: 5 }, () => Math.floor(Math.random() * 8) + 1)
-        
+
         );
 
         let resultado2 = "";
@@ -62,18 +70,18 @@
         let resultado3 = "";
 
         const tablas = Array.from({ length: 100 }, () =>
-            Array.from({length: 100}, () => 0)
-    
+            Array.from({ length: 100 }, () => 0)
+
         );
 
         tablas.map((filas, i) => {
 
-            resultado3 += "<br>Tabla del " + (i+1) + ": ";
+            resultado3 += "<br>Tabla del " + (i + 1) + ": ";
 
             filas.map((numeros, j) => {
 
-                resultado3 += "<br>" + (i+1) + " * " + (j+1) + ": "
-                resultado3 += (i+1) * (j+1);
+                resultado3 += "<br>" + (i + 1) + " * " + (j + 1) + ": "
+                resultado3 += (i + 1) * (j + 1);
 
             })
 
@@ -82,6 +90,71 @@
         });
 
         document.getElementById("ej3").innerHTML += resultado3;
+
+        // Ejercicio 4
+
+        let resultado4 = "";
+
+        const tablas4 = Array.from({ length: 100 }, () =>
+            Array.from({ length: 100 }, () => 0)
+        );
+
+        tablas4.map((filas, i) => {
+
+            resultado4 += "<br>Tabla del " + (i + 1) + ": ";
+
+            const nuevasFilas = filas.map((numeros, j) => {
+
+                return (i + 1) * (j + 1) + 2;
+
+            });
+
+            nuevasFilas.map((numero, j) => {
+
+                resultado4 += "<br>" + (i + 1) + " * " + (j + 1) + " + 2: ";
+                resultado4 += numero;
+
+            });
+
+            resultado4 += "<br>";
+
+        });
+
+        document.getElementById("ej4").innerHTML = resultado4;
+
+        // Ejercicio 5
+
+        let resultado5 = "";
+
+        const tablas5 = Array.from({ length: 100 }, () =>
+            Array.from({ length: 100 }, () =>
+                Array.from({ length: 100 }, () => 0)
+            )
+        );
+
+        tablas5.map((filas, i) => {
+
+            resultado5 += "<br>Tabla del " + (i + 1) + ": ";
+
+            filas.map((columnas, j) => {
+
+                columnas.map((numeros, k) => {
+
+                    resultado5 += "<br>";
+                    resultado5 += (i + 1) + " * ";
+                    resultado5 += (j + 1) + " * ";
+                    resultado5 += (k + 1) + ": ";
+
+                    resultado5 += (i + 1) * (j + 1) * (k + 1);
+
+                });
+
+            });
+
+        });
+
+        document.getElementById("ej5").innerHTML = resultado5;
+
 
         //Ejercicio 6
 
@@ -179,6 +252,63 @@
         ).join("<li>")
 
         document.getElementById("ej61").innerHTML += "<ol>" + resumen2 + "</ol><br>";
+
+        // Ejercicio 7
+
+        function calcularMediaAnios(tabla) {
+
+            let resultado = "";
+
+            for (let j = 2; j <= 7; j++) {
+
+                let media = 0;
+
+                for (let i = 0; i < tabla.length; i++) {
+
+                    media += tabla[i][j];
+
+                }
+
+                media = media / tabla.length;
+
+                resultado += "Año " + (j - 1) + ": " + media.toFixed(2) + "<br>";
+
+            }
+
+            return resultado;
+
+        }
+
+        document.getElementById("ej7").innerHTML = calcularMediaAnios(valores);
+
+
+        // Ejercicio 8
+
+        function mostrartabla(tabla, id) {
+
+            let resultado = "<table border='1'>";
+
+            tabla.map((fila, i) => {
+
+                resultado += "<tr>";
+
+                fila.map((dato, j) => {
+
+                    resultado += "<td>" + dato + "</td>";
+
+                });
+
+                resultado += "</tr>";
+
+            });
+
+            resultado += "</table>";
+
+            document.getElementById(id).innerHTML = resultado;
+
+        }
+
+        mostrartabla(valores, "ej8");
 
     </script>
 
