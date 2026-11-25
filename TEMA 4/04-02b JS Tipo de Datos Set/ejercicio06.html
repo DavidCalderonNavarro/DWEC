@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+    <p>Eliminar Personaje Escribe una función que tome el conjunto personajesSet y un
+        personaje como argumentos, y elimine el personaje del conjunto si está presente. Imprime un mensaje
+        indicando si el personaje fue eliminado o si no estaba en el conjunto.</p>
+
+    <script>
+
+        let personajesSet = new Set()
+
+        personajesSet.add("Frodo");
+        personajesSet.add("Gandalf");
+        personajesSet.add("Aragorn");
+        personajesSet.add("Legolas");
+        personajesSet.add("Gimli");
+
+        function eliminarPersonaje(set, personaje) {
+
+            if (!set.has(personaje)) {
+
+                return "El personaje no estaba en el conjunto";
+
+            } else {
+
+                set.delete(personaje)
+
+            }
+
+            return set
+
+        }
+
+        document.writeln(eliminarPersonaje(personajesSet, "Frodo") + "<br>");
+
+        for (const personaje of personajesSet) {
+
+            document.writeln(personaje)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

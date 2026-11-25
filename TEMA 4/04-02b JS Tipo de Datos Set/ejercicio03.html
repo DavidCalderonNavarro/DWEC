@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 3</h1>
+    <p>Verificar la Existencia de un Personaje Escribe una función que tome el conjunto
+        personajesSet y un nombre de personaje como argumentos, y devuelva true si el personaje está
+        presente en el conjunto, y false en caso contrario.</p>
+
+    <script>
+
+        let personajesSet = new Set()
+
+        personajesSet.add("Frodo");
+        personajesSet.add("Gandalf");
+        personajesSet.add("Aragorn");
+        personajesSet.add("Legolas");
+        personajesSet.add("Gimli");
+
+        function comprobarPersonaje(personaje) {
+
+            if (personajesSet.has(personaje)) {
+
+                return true
+
+            } else {
+
+                return false
+
+            }
+
+        }
+
+        document.writeln(comprobarPersonaje("Frodo"));
+
+    </script>
+
+</body>
+
+</html>

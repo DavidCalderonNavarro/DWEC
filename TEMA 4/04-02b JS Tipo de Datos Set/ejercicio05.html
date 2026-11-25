@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+    <p>Agregar Personajes Únicos Escribe una función que tome el conjunto personajesSet y
+        un nuevo personaje como argumentos, y añada el nuevo personaje al conjunto solo si no está presente.
+        Devuelve el conjunto actualizado.</p>
+
+    <script>
+
+        let personajesSet = new Set()
+
+        personajesSet.add("Frodo");
+        personajesSet.add("Gandalf");
+        personajesSet.add("Aragorn");
+        personajesSet.add("Legolas");
+        personajesSet.add("Gimli");
+
+        function meterPersonaje(set, personajeNuevo) {
+
+            if (set.has(personajeNuevo)) {
+
+                return "El personaje ya esta en la lista";
+
+            } else {
+
+                set.add(personajeNuevo);
+
+            }
+
+            return set;
+
+        }
+
+        document.writeln(meterPersonaje(personajesSet, "Frdo") + "<br>");
+
+        for (const personaje of personajesSet) {
+
+            document.writeln(personaje)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

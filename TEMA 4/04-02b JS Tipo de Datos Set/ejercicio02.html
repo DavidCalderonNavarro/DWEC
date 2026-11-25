@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+    <p>Imprimir Personajes Itera sobre el conjunto personajesSet e imprime cada personaje
+        en la consola.</p>
+        
+    <script>
+
+        let personajesSet = new Set()
+
+        personajesSet.add("Frodo");
+        personajesSet.add("Gandalf");
+        personajesSet.add("Aragorn");
+        personajesSet.add("Legolas");
+        personajesSet.add("Gimli");
+
+        for (const personaje of personajesSet) {
+
+            document.writeln(personaje)
+
+        }
+
+    </script>
+
+</body>
+
+</html>
