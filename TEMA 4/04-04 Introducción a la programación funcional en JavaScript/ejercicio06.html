@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+
+    <script>
+        const book = {
+            id: 1,
+            title: "1984",
+            author: "Orwell"
+        };
+
+        Object.seal(book);
+
+        function updateBook(obj, nuevoTitulo) {
+            obj.title = nuevoTitulo;
+            obj.pages = 328;
+            delete obj.author;
+        }
+
+        updateBook(book, "Stars Wars");
+
+        document.writeln("ID: " + book.id + "<br>");
+        document.writeln("Título: " + book.title + "<br>");
+        document.writeln("Autor: " + book.author + "<br>");
+        document.writeln("Páginas: " + book.pages);
+        
+    </script>
+
+</body>
+
+</html>

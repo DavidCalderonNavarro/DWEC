@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 3</h1>
+
+    <script>
+        function deepFreeze(obj) {
+            Object.freeze(obj);
+
+            for (let propiedad in obj) {
+                if (typeof obj[propiedad] === "object" && obj[propiedad] !== null) {
+                    deepFreeze(obj[propiedad]);
+                }
+            }
+
+            return obj;
+            
+        }
+
+        let persona = {
+            user: {
+                name: "Ana",
+                preferences: {
+                    theme: "dark"
+                }
+            }
+        };
+
+        deepFreeze(persona);
+
+        persona.user.name = "Carlos";
+        persona.user.preferences.theme = "light";
+
+        document.writeln("Nombre: " + persona.user.name + "<br>");
+        document.writeln("Tema: " + persona.user.preferences.theme + "<br>");
+
+        document.writeln("Persona congelada: " + Object.isFrozen(persona) + "<br>");
+        document.writeln("User congelado: " + Object.isFrozen(persona.user) + "<br>");
+        document.writeln("Preferences congelado: " + Object.isFrozen(persona.user.preferences));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 4</h1>
+
+    <script>
+        const car1 = { brand: "Ford", year: 2010 };
+        const car2 = { brand: "Ford", year: 2010 };
+
+        Object.freeze(car1);
+        Object.seal(car2);
+
+        car1.year = 2020;
+        car2.year = 2020;
+
+        car1.color = "rojo";
+        car2.color = "rojo";
+
+        delete car1.brand;
+        delete car2.brand;
+
+        document.writeln("<h3>Car1 (freeze)</h3>");
+        document.writeln("Brand: " + car1.brand + "<br>");
+        document.writeln("Year: " + car1.year + "<br>");
+        document.writeln("Color: " + car1.color + "<br>");
+
+        document.writeln("<h3>Car2 (seal)</h3>");
+        document.writeln("Brand: " + car2.brand + "<br>");
+        document.writeln("Year: " + car2.year + "<br>");
+        document.writeln("Color: " + car2.color + "<br>");
+    </script>
+
+</body>
+
+</html>

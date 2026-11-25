@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+
+    <script>
+
+        const state = {
+            settings: {
+                notifications: true,
+                theme: "light"
+            },
+            user: {
+                name: "Carlos",
+                loggedIn: true
+            }
+        };
+
+        Object.freeze(state);
+
+        state.user.loggedIn = false;
+        state.settings.theme = "dark";
+
+        document.writeln("Object.freeze(state) congela únicamente el objeto principal, no los objetos que contiene (settings y user).<br>")
+        document.writeln("LoggedIn: " + state.user.loggedIn + "<br>");
+        document.writeln("Theme: " + state.settings.theme);
+
+    </script>
+
+</body>
+
+</html>
