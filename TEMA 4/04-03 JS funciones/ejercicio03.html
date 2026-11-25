@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 3</h1>
+    <p>Modifica el anterior para que uses parametros rest con un numero indeterminado de parametros,
+        esto es la función debe ser algo como </p>
+
+    <div id="identificador"></div>
+
+    <script>
+
+        function listaen(id, ...valores) {
+            let resultado = "<ul>";
+
+            for (let i = 0; i < valores.length; i++) {
+                resultado += "<li>" + valores[i] + "</li>";
+            }
+
+            resultado += "</ul>";
+
+            document.getElementById(id).innerHTML = resultado;
+        }
+
+        listaen("identificador",
+            "Hola",
+            "adios",
+            "bien",
+            "Hasta mañana",
+            "algo"
+        );
+    </script>
+
+</body>
+
+</html>

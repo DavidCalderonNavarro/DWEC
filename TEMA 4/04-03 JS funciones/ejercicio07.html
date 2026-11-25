@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7</h1>
+    <p>Crea una función anónima con flechas que ponga en negrita el parámetro añadiéndole <strong>
+        </strong> y usala con la función map sobre un array como por ejemplo</p>
+
+    <script>
+
+        let a = ["ola", "adios", "amalia pide muchos detalles"];
+
+        let resultado = a.map((texto) => {
+            return "<strong>" + texto + "</strong>";
+        });
+
+        document.write(resultado.join("<br>"));
+
+    </script>
+
+</body>
+
+</html>

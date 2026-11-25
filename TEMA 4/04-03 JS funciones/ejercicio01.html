@@ -12,11 +12,29 @@
     <h1>Ejercicio 1</h1>
     <p>Crea una función Ej1Trigonometica que se le pase dos parametros
         <br>1) un número que es angulo en grados
-        <br>2) un valor : cos, sen o tan</p>
+        <br>2) un valor : cos, sen o tan
+    </p>
 
     <script>
 
-        
+        function Ej1Trigonometrica(grados, operacion) {
+            let radianes = grados * Math.PI / 180;
+
+            if (operacion == "cos") {
+                return Math.cos(radianes);
+            }
+            else if (operacion == "sen") {
+                return Math.sin(radianes);
+            }
+            else if (operacion == "tan") {
+                return Math.tan(radianes);
+            }
+            else {
+                return "Operación incorrecta";
+            }
+        }
+
+        document.write(Ej1Trigonometrica(60, "cos"));
 
     </script>
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 10</h1>
+    <p>10. Haz una función que se le pase un id y un color y cambie su color de texto. Debes usar el
+        siguiente código</p>
+
+    <p id="texto">Este texto cambiará de color.</p>
+
+    <select id="colores">
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="purple">Morado</option>
+        <option value="orange">Naranja</option>
+    </select>
+    <button onclick="cambiarColor('texto', document.getElementById('colores').value)">Cambiar color</button>
+
+    <script>
+
+        function cambiarColor(id, color) {
+
+            let obj = document.getElementById(id);
+            obj.style.color = color;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

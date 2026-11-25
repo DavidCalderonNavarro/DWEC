@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+    <p>Crea una función Ej2JS que le pases una lista de valores y un id y te cree una lista ordenada
+        con ellos escrita en el el id</p>
+
+    <div id="algo"></div>
+
+    <script>
+        function Ej2JS(valores, id) {
+            let lista = valores.split(",");
+            let resultado = "<ul>";
+
+            for (let i = 0; i < lista.length; i++) {
+                resultado += "<li>" + lista[i].trim() + "</li>";
+            }
+
+            resultado += "</ul>";
+
+            document.getElementById(id).innerHTML = resultado;
+        }
+
+        Ej2JS("hola,adios,bien,Hasta mañana", "algo");
+    </script>
+
+</body>
+
+</html>

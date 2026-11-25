@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 12</h1>
+    <p>Haz un ejercicio que calcule el factorial de un numero de manera recursiva.</p>
+
+    <script>
+
+        function factorial(valor) {
+
+            if (valor == 0 || valor == 1) {
+                return 1;
+            }
+            else {
+                return valor * factorial(valor - 1);
+            }
+
+        }
+
+        document.write("El factorial de 5 es: " + factorial(5));
+
+    </script>
+
+</body>
+
+</html>
