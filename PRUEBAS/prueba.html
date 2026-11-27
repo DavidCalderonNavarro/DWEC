@@ -14,6 +14,17 @@
         let array2 = [1, 2, 3, 45];
         let producto = array2.reduce((acc, e) => acc * e, 1);
         document.writeln(producto);
+        let max = array2.reduce((acc, e) => (acc > e)?acc:e , -Infinity);
+        let min = array2.reduce((acc, e) => (acc < e)?acc:e , Infinity);
+
+        document.writeln(max);
+        document.writeln(min);
+
+        //Array a String
+
+        let arrayString = array2.reduce((acc, e) => (acc=="")?e:acc + "-" + e , "");
+
+        document.writeln(arrayString);
 
     </script>
 
