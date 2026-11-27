@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <h1>Ejercicio 1</h1>
+
+    <script>
+
+        const  ID_tienda = Array.of(1,2,3,4,5);
+
+        ID_tienda.fill(7, 1, 5);
+        ID_tienda.unshift(0,0);
+        ID_tienda.pop();
+
+        const nuevoLote = [10,20,30];
+
+        const array = ID_tienda.concat(nuevoLote);
+
+        document.writeln(array);
+
+    </script>
+    
+</body>
+</html>

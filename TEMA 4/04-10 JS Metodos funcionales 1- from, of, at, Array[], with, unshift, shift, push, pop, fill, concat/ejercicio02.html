@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+
+    <script>
+
+        const letras = "abcdef"
+
+        const array = Array.from(letras);
+
+        document.writeln("Tercero: " + array.at(3) + "<br>");
+        document.writeln("Ultimo: " + array.at(-1) + "<br>");
+        document.writeln("<br>");
+
+        const nuevoArray = array.with(2, "X");
+
+        document.writeln(nuevoArray + "<br>");
+
+        document.writeln("Empleado a eliminar: " + array.shift() + "<br>");
+
+        document.writeln("Nuevo array: " + array)
+
+        array.push("Y", "Z");
+
+        document.writeln("<br>Array final: " + array)
+
+    </script>
+
+</body>
+
+</html>

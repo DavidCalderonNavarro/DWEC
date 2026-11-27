@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+
+    <script>
+
+        const pedidos = [1, 2, 3, 4, 5, 6];
+
+        document.writeln("Tercer pedido: " + pedidos.at(2) + "<br>");
+        document.writeln("Ultimo pedido: " + pedidos.at(-1) + "<br>");
+
+        const nuevosPedidos = pedidos.with(0, 0);
+
+        nuevosPedidos.fill(8, 1, 4);
+
+        nuevosPedidos.shift();
+        nuevosPedidos.pop();
+        nuevosPedidos.push(7, 8, 9);
+
+        document.writeln(nuevosPedidos);
+
+    </script>
+
+</body>
+
+</html>

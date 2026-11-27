@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+
+    <h1>Ejercicio 4</h1>
+
+    <script>
+
+        const preciosProductos = [100, 200, 300, 400];
+
+        preciosProductos.push(500, 600);
+        preciosProductos.shift();
+        const nuevosPrecios = preciosProductos.with(2, 999);
+        const nuevaLista = [700, 800, 900];
+
+        const arrayFinal = nuevosPrecios.concat(nuevaLista);
+
+        document.writeln(arrayFinal);
+
+    </script>
+    
+</body>
+</html>

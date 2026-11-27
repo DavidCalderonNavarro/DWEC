@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+    <h1>Ejercicio 5</h1>
+
+    <script>
+
+        const frase = "hello world";
+        const caracteres = Array.from(frase);
+
+        if(!/[a-zA-Z]/.test(caracteres.at(4)) || !/[a-zA-Z]/.test(caracteres.at(-1))) {
+
+            alert("No es una letra valida")
+
+        }else{
+
+            document.writeln("Letras de la posicion 5 y ultima: <br>")
+            document.writeln("Posicion 5: " + caracteres.at(4) + "<br>");
+            document.writeln("Ultima posicion: " + caracteres.at(-1) + "<br>");
+
+        }
+
+        caracteres.unshift("#");
+
+        for(let i = 0; i < caracteres.length; i++){
+
+            if(caracteres[i] == " "){
+
+                caracteres.fill("*", i , i + 1);
+
+            }
+
+        }
+
+        const exclamativa = ['!', '!', '!'];
+
+        const arrayFinal = caracteres.concat(exclamativa);
+
+        document.writeln("<br>Array final: " + arrayFinal);
+
+
+    </script>
+    
+</body>
+</html>
